@@ -15,3 +15,6 @@ class Car(pygame.sprite.Sprite):
 
         # pygame에서 사용될 이미지 데이터를 rect 변수에 저장한다
         self.rect = self.image.get_rect()
+    
+    def moveRight(self):
+        self.rect.x += 10

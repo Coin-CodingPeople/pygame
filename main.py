@@ -2,8 +2,6 @@ import pygame
 from Car import Car
 
  # 우리의 어플리케이션!
-
-
 class App:
     # 게임 내부 초기화 이전에 해야할 작업들
     def __init__(self):
@@ -48,6 +46,9 @@ class App:
     def on_event(self, event):
         if event.type == pygame.QUIT:
             self.running = False
+        elif event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_RIGHT:
+                self.playerCar.moveRight()
 
     # 매 반복시마다 해야할 작업들
     def on_loop(self):
@@ -56,6 +57,9 @@ class App:
 
     # 화면을 보여줄 때 마다 해야할 작업들
     def on_render(self):
+        # 바탕그리기
+        self.screen.fill((255, 255, 255))
+        
         # 게임의 sprite들을 screen에 그린다
         self.sprites.draw(self.screen)
 
