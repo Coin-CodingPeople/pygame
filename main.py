@@ -14,6 +14,16 @@ class App:
     # 게임을 초기화 할 때 해야할 작업들
     def on_init(self):
         pygame.init()
+
+        # font 시스템 초기화
+        pygame.font.init()
+
+        # font 설정
+        self.font = pygame.font.SysFont('Raleway', 30)
+
+        # 글씨 쓰기
+        # 텍스트, 안티얼라이싱 여부, 색
+        self.text = self.font.render('Racing Car~!', False, (0, 0, 0))
          
         # 디스플레이 모드 설정, 디스플레이 데이터를 screen이라는 변수에 담는다
         self.screen = pygame.display.set_mode(self.size, 0, 16)
@@ -65,6 +75,9 @@ class App:
     def on_render(self):
         # 바탕그리기
         self.screen.fill((255, 255, 255))
+
+        # 글씨그리기
+        self.screen.blit(self.text, (0, 0))
         
         # 게임의 sprite들을 screen에 그린다
         self.sprites.draw(self.screen)
