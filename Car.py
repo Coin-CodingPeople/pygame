@@ -17,6 +17,13 @@ class Car(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
     
     def moveRight(self):
-        self.rect.x += 1
+        self.rect.x += 10
 
-    # 여기에 움직임을 추가해보자!
+    def moveLeft(self):
+        self.rect.x -= 10
+
+    def moveUp(self):
+        self.rect.y -= 10
+
+    def moveDown(self):
+        self.rect.y += 10
