@@ -1,4 +1,5 @@
 import pygame
+from Car import Car
 
  # 우리의 어플리케이션!
 
@@ -30,6 +31,19 @@ class App:
         # 이 프로그램에선 running = True 일 때만 게임이 실행되도록 한다
         self.running = True
 
+        # 게임의 모든 sprite를 포함하는 변수
+        self.sprites = pygame.sprite.Group()
+
+        # playerCar에 Car라는 sprite를 만들어 담는다.
+        # Car 색깔 바꿔보세요!
+        # EX) (255, 0, 0) -> (0, 255, 0)
+        self.playerCar = Car((0, 255, 0), 20, 30)
+        self.playerCar.rect.x = 0
+        self.playerCar.rect.y = 0
+
+        # playerCar를 게임 sprite 관리 그룹에 추가한다.
+        self.sprites.add(self.playerCar)
+
     # 이벤트가 발생할 때 해야할 작업들
     def on_event(self, event):
         if event.type == pygame.QUIT:
@@ -37,11 +51,13 @@ class App:
 
     # 매 반복시마다 해야할 작업들
     def on_loop(self):
-        pass
+        # 게임의 sprite들에 대한 정보를 업데이트한다
+        self.sprites.update()
 
     # 화면을 보여줄 때 마다 해야할 작업들
     def on_render(self):
-        pass
+        # 게임의 sprite들을 screen에 그린다
+        self.sprites.draw(self.screen)
 
     # 게임을 종료할 때 해야할 작업들
     def on_cleanup(self):
