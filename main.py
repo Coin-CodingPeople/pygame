@@ -35,7 +35,7 @@ class App:
         # playerCar에 Car라는 sprite를 만들어 담는다.
         # Car 색깔 바꿔보세요!
         # EX) (255, 0, 0) -> (0, 255, 0)
-        self.playerCar = Car((0, 255, 0), 20, 30)
+        self.playerCar = Car((0, 255, 0), 100, 30)
         self.playerCar.rect.x = 0
         self.playerCar.rect.y = 0
 
