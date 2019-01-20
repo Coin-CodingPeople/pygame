@@ -1,0 +1,5 @@
+# python viratualenv dir
+venv/
+
+# vscode configuration dir
+.vscode/
