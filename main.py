@@ -49,6 +49,7 @@ class App:
         elif event.type==pygame.KEYDOWN:
             if event.key==pygame.K_RIGHT:
                 self.playerCar.moveRight()
+            # 여기서 키보드 이벤트를 받아보자!
 
     # 매 반복시마다 해야할 작업들
     def on_loop(self):
