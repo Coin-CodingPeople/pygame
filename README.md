@@ -27,6 +27,8 @@
 ## Racing Car~! Text
 [main.py](https://github.com/Coin-CodingPeople/pygame/blob/fd95472fe205f6a271051c30e6ae25afef5c5ffc/main.py)
 
-## Snake Game
-[github repo](https://github.com/Coin-CodingPeople/SnakeGame)
+## Snake Game Template
+[snake_game.py](https://github.com/Coin-CodingPeople/SnakeGame/blob/master/snake_game.py)
 
+## Snake Game 완성!
+[snake_game.py](https://github.com/Coin-CodingPeople/SnakeGame/blob/d7fd6bf03e20ee77672c65e78435689faa15eb7f/snake_game.py)
